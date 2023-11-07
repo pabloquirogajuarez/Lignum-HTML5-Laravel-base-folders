@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Formulario de registro</h1>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" placeholder="Ingrese el nombre" required>
+                <br>
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" placeholder="Ingrese el apellido" required>
+                <br>
+                <label for="email">Correo electronico:</label>
+                <input type="email" name="email" placeholder="Ingrese el correo electronico" required>
+                <br>
+                <label for="cumple">Cumpleaños:</label>
+                <input type="date" name="cumple" required>
+                <br>
+                <label for="deporte">Deporte Favorito:</label>
+                <select name="deporte" id="deporte">
+                    <option value="futbol">fulbo</option>
+                    <option value="baloncesto">basket</option>
+                    <option value="tenis">padel</option>
+                </select>
+                <br>
+                <label for="bio">Biografia</label>
+                <textarea name="bio" id="bio" cols="20" rows="0"></textarea>
+                <br>
+                <input type="submit" value="Enviar formulario">
+                <input type="reset" value="Limpiar formulario">
+            </form>
+          </section>
+    </main>
+</body>
+</html>
