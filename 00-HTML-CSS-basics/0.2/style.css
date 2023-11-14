@@ -1,0 +1,17 @@
+* {
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+}
+
+header, footer, aside, nav{
+    background-color: blue ;
+    padding: 10px;
+    color: white;
+}
+
+.encabezado, .footer{
+    text-align: center;
+}
+
+
+
