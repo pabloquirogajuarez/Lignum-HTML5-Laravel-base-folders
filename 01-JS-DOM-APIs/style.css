@@ -1,0 +1,38 @@
+*{
+    font-family: sans-serif;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(189, 189, 189);
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.section-oculta{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(189, 189, 189);
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+/* -- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
