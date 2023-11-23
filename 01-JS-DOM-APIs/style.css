@@ -1,18 +1,131 @@
 *{
-    font-family: sans-serif;
+    font-family: Inter, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.section-container {
+body{
+    font-size: 1rem;
+}
+
+main{
     display: flex;
     flex-direction: column;
-    background-color: rgb(189, 189, 189);
+    background: rgb(144, 202, 249);
+    background: linear-gradient(90deg, rgba(144, 202, 249, 1) 0%, rgba(255, 207, 160, 1) 50%, rgba(255, 136, 124, 1) 100%);
+    
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
     text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid black;
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #4CAF50;
+    font-weight: 800;
+
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+input {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f2f2f2;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+  }
+
+.section-container {
+    background-color: #e0e0e0;
     border-radius: 5px;
     border: 1px solid black;
     margin: 10px;
     padding: 10px;
+    width: 40%;
+    height: 30%;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Ajusta según sea necesario */
+  }
+  
+  /* Estilo para las celdas de la tabla */
+  td, th {
+    padding: 5px;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  
+  /* Estilo para la fila encabezado */
+  th {
+    background-color: #4CAF50; /* Verde, mismo que el fondo de los botones */
+    color: #fff; /* Texto en blanco para contrastar */
+  }
+
+.lista-repos{
+    background-color: #e0e0e0;
+    width: 20%;
+    height: 60%;
+    margin-top: 0;
+    margin-left: 80%;
+    position: absolute;
+    overflow: auto;
+    border-radius: 5px;
+    border: solid 1px black;
+    
+}
+
+.lista-repos label{
+    font-weight: 600;
+}
+
+#listado{
+    list-style-type: decimal;
+    width: 100%;
+    height: 100%;
+    padding: 28px;
+    margin: 0; 
+    font-weight: 500;
+}
+
+::-webkit-scrollbar {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4CAF50; 
+    border-radius: 10px;
+  }
+
+
+
 
 
 /* animaciones fadeIn */
@@ -32,4 +145,7 @@
 
 #mensajeDeChuck{
     font-weight: bold;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

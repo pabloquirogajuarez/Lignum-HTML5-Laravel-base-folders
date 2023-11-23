@@ -5,15 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>topic 1</title>
+
+      <!-- fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 </head>
 <body>
-    <section class="section-container">
-        <h1>Titulo</h1>
+    <main>
+    <section class="section-container" id="sectionError">
+        <h1>Chuck norris api</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, ab.</p>
         <p id="section-oculta">Hello World</p>
-        <p id="mensajeDeChuck"></p>
+        <div class="mensaje-container"><p id="mensajeDeChuck"></p></div>
+        
     </section>
-    <button id="button">click me</button>
+    <button id="button">click to generate</button>
+    
+    <section class="section-container">
+        <table id="tabla"></table>
+    </section>
+
+    <aside class="lista-repos">
+        <label for="buscar">Buscar repositorios:</label>
+        <input type="text" id="buscar" placeholder="buscar repo...">
+        <button onclick="realizarBusqueda()">Buscar</button>
+        <ul id="listado"></ul>
+    </aside>
+
+    </main>
 </body>
 <script src="script.js"></script>
 </html>
