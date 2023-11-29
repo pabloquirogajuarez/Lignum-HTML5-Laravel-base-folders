@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() { //
     // muestra la section con la propiedad display
     section.style.display = "block"; 
 
-    // agrega una clase para activar el efecto de desvanecimiento
+    // agrega una propiedad para activar el efecto de desvanecimiento
     section.classList.add("fade-in");
 
     //button 1.2
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() { //
     //------------------------------------- 1.3 ---------------------------------- //
     async function getData(){
         try{
-            const data = await fetch('https://api.chucknorris.io/jokes/random'); //consumiendo api 
+            const data = await fetch('https://api.chucknorris.io/jokes/random'); //consumiendo api --- recibe una promesa 
             const json = await data.json();
             
            /* console.log(json);
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() { //
 //------------------------------------- ajax 1.3 ---------------------------------- //
 
 function hacerLlamadaAjax(configuracion) {
-    // retorna una nueva promesa para manejar la asincronía
+    // retorna una nueva promesa para manejar la asincronia
     return new Promise(function (resolve, reject) {
       // crea un nuevo objeto XMLHttpRequest
       var xhr = new XMLHttpRequest();
@@ -54,7 +54,7 @@ function hacerLlamadaAjax(configuracion) {
       // maneja los eventos de la solicitud
       xhr.onload = function () {
         //if (xhr.status >= 200 && xhr.status < 300) {
-            if (xhr.status == 200) {
+        if (xhr.status == 200) {
           // si la solicitud fue exitosa, resuelve la promesa con la respuesta
           resolve(xhr.responseText);
         } else {
@@ -69,7 +69,9 @@ function hacerLlamadaAjax(configuracion) {
       };
   
       // convierte el objeto de datos a una cadena JSON si es necesario
-      var datos = configuracion.datos ? JSON.stringify(configuracion.datos) : null;
+      var datos = configuracion.datos ? JSON.stringify(configuracion.datos) : null; //
+      var asd = '123';
+      console.log(parseInt(asd)); //parsear 
   
       // envia la solicitud con los datos apropiados
       xhr.send(datos);
@@ -80,7 +82,12 @@ function hacerLlamadaAjax(configuracion) {
     metodo: 'GET',
     url: 'https://api.chucknorris.io/jokes/random', //url de la config
   };
+
+
   
+
+  // 1.3.5 Si ocurre un error del servidor, el contenido de la section debe ponerse rojo. //
+
   var section = document.getElementById('sectionError'); //section toma el id
   hacerLlamadaAjax(configuracion)
     .then(function (respuesta) {
